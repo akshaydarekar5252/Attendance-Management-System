@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Attendance Management System</h1>
+    </header>
+    <div class="container">
+        <div class="form-group">
+            <label for="student-name">Add Student Name and Roll Number:</label>
+            <input type="text" id="student-name" placeholder="Enter student name">
+            <input type="text" id="student-roll" placeholder="Enter student roll number">
+            <button onclick="addStudent()">Add Student</button>
+        </div>
+        <div class="form-group">
+            <label for="attendance-student">Mark Attendance:</label>
+            <select id="attendance-student">
+                <option value="">Select Student</option>
+            </select>
+            <select id="attendance-status">
+                <option value="">Select Status</option>
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+            </select>
+            <button onclick="markAttendance()">Mark Attendance</button>
+        </div>
+
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <button onclick="exportToExcel()">Export to Excel</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
